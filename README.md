@@ -6,7 +6,7 @@ MH Cyber Security Projects - reference notes, revision for security certificatio
 
 The files in this repository were used to configure the network depicted below.
 
-[ELK Stack Network Diagram](https://github.com/Martin6402/Cyber-Security---Projects/blob/main/diagrams/ELK_Stack_Network_Diagram.png "ELK Stack Network Diagram was drawn in draw.io package")
+[ELK Stack Network Diagram](https://github.com/Martin6402/Cyber-Security---Projects/blob/main/diagrams/Automated_Azure_ELK_Stack_Network_Diagram.pdf "ELK Stack Network Diagram was drawn in draw.io package")
 
 [Azure RedTeam Network Topology](https://github.com/Martin6402/Cyber-Security---Projects/blob/main/diagrams/Azure_Generated_RedTeam_Network_Topology_Screenshot.png "Azure Generated RedTeam Network Topology Screenshot .png")
 
@@ -211,7 +211,7 @@ SSH into the control node and follow the steps below:
            setup.kibana:
              host: "10.2.0.4:5601" # TODO: Change this to the IP address of your ELK server
 
-5. The playbook file is [filebeat-playbook.yml](https://github.com/Martin6402/Cyber-Security---Projects/blob/main/ansible/roles/files/filebeat-playbook.yml "filebeat-playbook.yml file") and it is located in the folder '/etc/ansible' of your JumpBox Docker container.
+5. The playbook file is [filebeat-playbook.yml](https://github.com/Martin6402/Cyber-Security---Projects/blob/main/ansible/roles/filebeat-playbook.yml "filebeat-playbook.yml file") and it is located in the folder '/etc/ansible' of your JumpBox Docker container.
 This playbook runs from your JumpBox container with ansible on it, performing the tasks on the sever/s you specified in the hosts file ;
     1. downloads the filebeat software from a web repository to each webserver,
     2. copies the _filebeat-config.yml_ file from the JumpBox _/etc/ansible/roles/files to each webserver,
