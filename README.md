@@ -6,7 +6,7 @@ MH Cyber Security Projects - reference notes, revision for security certificatio
 
 The files in this repository were used to configure the network depicted below.
 
-[ELK Stack Network Diagram](https://github.com/Martin6402/Cyber-Security---Projects/blob/main/diagrams/Automated_Azure_ELK_Stack_Network_Diagram.pdf "ELK Stack Network Diagram was drawn in draw.io package")
+[ELK Stack Network Diagram](https://github.com/Martin6402/Cyber-Security---Projects/blob/main/diagrams/Automated_Azure_ELK_Stack_Network_Diagram.png "ELK Stack Network Diagram was drawn in draw.io package")
 
 [Azure RedTeam Network Topology](https://github.com/Martin6402/Cyber-Security---Projects/blob/main/diagrams/Azure_Generated_RedTeam_Network_Topology_Screenshot.png "Azure Generated RedTeam Network Topology Screenshot .png")
 
