@@ -14,7 +14,7 @@
     # Use copy module
   - name: drop in metricbeat config
     copy:
-      src: /etc/ansible/files/metricbeat-config.yml
+      src: /etc/ansible/roles/files/metricbeat-config.yml
       dest: /etc/metricbeat/metricbeat.yml
 
     # Use command module

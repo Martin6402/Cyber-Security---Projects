@@ -1,57 +1,3 @@
----
-- name: Install metric beat
-  hosts: webservers
-  become: true
-  tasks:
-    # Use command module
-  - name: Download metricbeat deb
-    command: curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.4.0-amd64.deb
-
-    # Use command module
-  - name: install metricbeat
-    command: dpkg -i metricbeat-7.4.0-amd64.deb
-
-    # Use copy module
-  - name: drop in metricbeat config
-    copy:
-      src: /etc/ansible/metricbeat-config.yml
-      dest: /etc/metricbeat/metricbeat.yml
-
-    # Use command module
-  - name: enable and configure docker module for metric beat
-    command: metricbeat modules enable docker
-
-    # Use command module
-  - name: setup metric beat
-    command: metricbeat setup
-
-    # Use command module
-  - name: start metric beat
-    command: service metricbeat start
-
-    # Use systemd module
-  - name: enable service metricbeat on boot
-    systemd:
-      name: metricbeat
-      enabled: yes
-
-root@927333067dd3:/etc/ansible/roles#
-root@927333067dd3:/etc/ansible/roles# ls -lh
-total 12K
--rw-r--r-- 1 root root 741 Mar  2 10:17 filebeat-playbook.yml
--rw-r--r-- 1 root root 938 Mar  3 09:07 metricbeat-playbook.yml
--rw-r--r-- 1 root root 926 Mar  3 11:38 metricbeat-playbooke.yml
-root@927333067dd3:/etc/ansible/roles# cd ..
-root@927333067dd3:/etc/ansible# ls -lh
-total 116K
--rw-r--r-- 1 root root  20K Feb 27 02:26 ansible.cfg
--rw-r--r-- 1 root root  72K Mar  2 08:28 filebeat-config.yml
--rw-r--r-- 1 root root 1.3K Mar  2 10:23 hosts
--rw-r--r-- 1 root root 1.3K Mar  2 12:06 install-elk.yml
--rw-r--r-- 1 root root 6.1K Mar  2 11:23 metricbeat-config.yml
--rw-r--r-- 1 root root  682 Feb 25 08:45 pentest.yml
-drwxr-xr-x 1 root root 4.0K Mar  3 11:54 roles
-root@927333067dd3:/etc/ansible# cat filebeat-config.yml
 ######################## Filebeat Configuration ############################
 # This file is a full configuration example documenting all non-deprecated
 # options in comments. For a shorter configuration example, that contains only
@@ -1158,7 +1104,7 @@ output.elasticsearch:
   # IPv6 addresses should always be defined as: https://[2001:db8::1]:9200
   hosts: ["10.2.0.4:9200"]
   username: "elastic"
-  password: "changeme" # TODO: Change this to the password you set
+  password: "changeme"
 
   # Set gzip compression level.
   #compression_level: 0

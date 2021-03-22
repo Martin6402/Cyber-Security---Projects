@@ -1,0 +1,13 @@
+---
+# 2020/12/24 MHills
+#
+# using the command     
+# crontab -e
+#
+# creating cron job for sysadmin to backup and compress file /var/log/auth.log to /auth_backup.tgz
+# every Wednesday at 06:00 am
+0 6 * * 3 sudo tar -cvvzf /auth_backup.tgz /var/log/auth.log
+# redirect mail from sysadmin to root email
+MAILTO=email@root.com
+#
+---

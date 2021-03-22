@@ -1,0 +1,15 @@
+
+Player data Analysis:
+Mylie Schmidt was at the Roulette table, every time the casino had a loss. (a "-" win to the casino).
+
+The quickest way to find this data was check for the least number of players at the Roulette table when losses occurred comparing the names (Mylie and Corey) to all other times, to work out who was at the table everytime a loss occurred.
+Mylie Schmidt was at the roulette table for every 13 casino loss.
+
+
+Dealer data Analysis:
+-Shows the Billy Jones was the dealer at the Roulette table each time there was a loss.
+13 times.
+
+Note:
+Billy Jones was at the Roulette table 15 times, but Mylie was only at the Roulette table 13 times and each of those time, the casino had a loss.
+

@@ -1,0 +1,15 @@
+ ---
+#!/bin/bash
+# 2020/12/24 MHills
+
+# Creating rules that watch the following paths:
+# For `/etc/shadow`, set `wra` for the permissions to monitor and set the `keyname` for this rule to #`hashpass_audit`.
+# For `/etc/passwd`, set `wra` for the permissions to monitor and set the `keyname` for this rule to #`userpass_audit`.
+# For `/var/log/auth.log`, set `wra` for the permissions to monitor and set the `keyname` for this rule to #`authlog_audit`.
+#
+-w /etc/shadow -p wra -k hashpass_audit
+-w /etc/passwd -p wra -k userpass_audit
+-w /var/log/auth.log -p wra -k authlog_audit
+
+#
+ ---
